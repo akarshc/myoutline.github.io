@@ -117,4 +117,21 @@ ul {
     .row {
     	width: 100%;
     }
+    .header {
+    	padding:0px;
+    	width: 100%;
+    	font-weight: 400;
+    	font-size:13px;
+    }
+    .header h1 {
+    	font-size:18px;
+    	line-height: 1em;
+    	font-weight: 700;
+    }
+    .main {
+    	padding:0px;
+    }
+    .main .col {
+    	padding:1.6em;
+    }
 }
