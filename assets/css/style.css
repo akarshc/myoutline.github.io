@@ -23,8 +23,9 @@ body {
 }
 .header {
 	font-family: roboto;
-	color:#9bf;
-	font-size:15px;
+	color:#f88;
+	font-size:14px;
+	font-weight: 700;
 	flex:2;
 	display: flex;
 	padding: 2em;
@@ -52,9 +53,9 @@ body {
 .main .col {
 	background: #fff;
 	margin:1em;
-	padding:2em;
+	padding:3em;
 	border-radius: 10px;
-	box-shadow: 0 2px 10px #f5f5f5;
+	box-shadow: 0 0 5px #eee;
 }
 .main h2 {
 	color:#555;
@@ -68,7 +69,7 @@ body {
 	margin-top:10px;
 	width: 30px;
 	height: 5px;
-	background: #acf;
+	background: #f88;
 }
 .main p {
 	color:#666;
@@ -76,19 +77,31 @@ body {
 	letter-spacing: .5px;
 	word-spacing: 1px;
 	font-family:lato;
+	line-height: 1.6em;
 }
 .tag {
-	background:#def;
+	background:#fdd;
 	letter-spacing: 1px;
-	color:#66a;
+	color:#822;
 	display: inline-block;
 	margin:5px;
-	padding:5px 8px;
+	padding:10px 15px;
 	font-size:12px;
 	font-weight: 700;
-	border-radius:5px;
+	border-radius:30px;
 }
 .exc {
-	background:#acf;
-	box-shadow: 2px 2px 10px #eef;
+	background:#f88;
+}
+strong {
+	background: #fee;
+}
+ul {
+	list-style: none;
+	color:#666;
+	font-size:18px;
+	letter-spacing: .5px;
+	word-spacing: 1px;
+	font-family:lato;
+	line-height: 1.6em;
 }
