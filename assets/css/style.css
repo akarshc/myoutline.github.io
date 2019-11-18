@@ -86,7 +86,6 @@ ul li {
 	margin:0;
 	margin-left:.4em;
 	padding: 0;
-	font-weight: 700;
 }
 
 .tag {
@@ -98,6 +97,12 @@ ul li {
 	font-size:13px;
 	font-weight: 700;
 	border-radius:3px;
+	cursor: default;
+	transition: .15s ease-in-out;
+}
+
+.tag:hover {
+	background: #ddf;
 }
 
 .exc {
