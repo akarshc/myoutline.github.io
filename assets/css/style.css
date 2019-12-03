@@ -2,7 +2,7 @@ body {
 	background:#fff;
 	margin:0;
 	padding: 0;
-	font-family: Lato;
+	font-family: Lora;
 	overflow-x: hidden;
 	color: #000;
 }
@@ -12,7 +12,14 @@ body {
 }
 
 a {
-	color: #05b;
+	color: #057;
+	text-decoration: none;
+	transition: .15s ease-in-out;
+	box-shadow: 0 1px 0 transparent;
+}
+
+a:hover {
+	box-shadow: 0 1px 0 #057;
 }
 
 .row {
@@ -29,20 +36,35 @@ a {
 	flex:2;
 }
 
+.header_out {
+	position: absolute;
+	background: #fff;
+	box-shadow: 0 1px 0 #fe2;
+	top:0;
+	left:0;
+	right:0;
+	height: 260px;
+	z-index: -1;
+}
+
 .header {
-	font-size:13px;
+	font-size:14px;
 	font-weight: 400;
+	padding-bottom: 2em;
+	display: inline-block;
+	background: transparent;
 }
 
 .header h1{
-	font-size: 15px;
+	font-size: 28px;
 	line-height: 0px;
-	font-weight: 700;
+	font-weight: 400;
 }
 
 .header img {
 	width: 120px;
-	border-radius: 120px;
+	height: 120px;
+	object-fit: cover;
 	display: inline;
 	margin-right:1em;
 }
@@ -59,20 +81,69 @@ a {
 
 .main h2 {
 	display: inline-block;
-	font-size:18px;
-	font-weight: 700;
+	font-size:26px;
+	font-weight: 400;
+	line-height: .5em;
 }
 
 .main p {
 	line-height: 1.3em;
-	font-size:15px;
+	font-size:18px;
 	margin:.5em 0;
 	padding: 0;
 }
 
+.main p strong {
+	background: #E7FFE5;
+	font-weight: 400;
+	font-style: italic;
+}
+
+button {
+	display: inline-block;
+	outline: 0;
+	border:none;
+	padding:20px 25px;
+	font-family: lora;
+	font-size: 16px;
+	border-radius: 0px;
+	background: #fff;
+	box-shadow: 0 0 0 1px #acf;
+	color: #067;
+	cursor: pointer;
+	transition: .25s ease-in-out;
+}
+
+button::after {
+	content: '\2794';
+	font-weight: 100;
+	font-size:11px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	transition: .25s ease-in-out;
+	margin-left: 5px;
+}
+
+button:hover:after {
+	margin-left:10px;
+}
+
+button:hover,
+button:active,
+button:focus {
+	box-shadow: 0 0 0 1px #067;
+}
+
+#workspace ul {
+	background: #E7FFE5;
+	border-radius: 0px;
+	padding: 3em;
+}
+
 ul li {
 	margin:.5em 0;
-	font-size:15px;
+	font-size:18px;
 }
 
 .menu {
@@ -88,30 +159,39 @@ ul li {
 	padding: 0;
 }
 
+.menu li a {
+	color: #000;
+}
+
 .tag {
-	background: #f5f5f5;
-	color:#333;
+	background: #ffa;
+	color:#000;
 	display: inline-block;
-	margin:2px;
+	margin:5px;
 	padding:3px 10px;
-	font-size:13px;
-	font-weight: 700;
-	border-radius:3px;
+	font-size:18px;
+	font-weight: 400;
+	border-radius: 0px;
 	cursor: default;
-	transition: .15s ease-in-out;
+	transition: .1s ease-in-out;
 }
 
 .tag:hover {
-	background: #ddf;
+	background: #fe2;
 }
 
 .exc {
-	color: #05b;
+	color: #000;
 }
 
 .footer {
-	font-size: 12px;
+	font-size: 13px;
 	margin-top:3em;
+	text-align: center;
+}
+
+heart {
+	color:#f44;
 }
 
 @media screen and (max-width: 1200px) {
