@@ -3,6 +3,22 @@
    100% {opacity: 1;}
 } 
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 body {
 	margin:0;
 	padding: 0;
@@ -16,16 +32,45 @@ h1 {
 	text-align: center;
 }
 
-.loading {
-	text-align: center;
+.loading_outer {
+	width: 100vw;
+	margin:4em 0;
+	display: flex;
+	justify-content: center;
 }
+
+.loading {
+	border: 3px solid #77cc99; /* Light grey */
+	border-top: 3px solid #f3f3f3; /* Blue */
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	animation: spin 1s linear infinite;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.img_load {
+	background:#fff;
+}
+
+.thumbnail {
+	width: 150px;
+	height: 150px;
+	margin-right: 1em;
+	display: flex;
+	background: #efd;
+	justify-content: center;
+	align-items: center;
+}
+
 
 #count {
 	font-size:11px;
 	color:#666;
 	right:20px;
 	margin-top:-15px;
-	animation: fadeIn .5s;
 	position: absolute;
 }
 
@@ -89,8 +134,8 @@ button:focus {
 	display: flex;
 	flex:6;
 	border-radius: 3px;
+	opacity: 1;
 	transition: .15s ease-in-out;
-	animation: fadeIn .5s;
 }
 
 .card:hover {
@@ -135,7 +180,6 @@ button:focus {
 	width: 150px;
 	height: 150px;
 	object-fit: cover;
-	margin-right: 1em;
 	border-radius: 3px;
 }
 
