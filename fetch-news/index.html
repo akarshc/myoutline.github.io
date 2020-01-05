@@ -13,8 +13,9 @@
 </header>
 <span id="count"></span>
 <search>
+	<li class="fa fa-search"></li>
 	<input id="search_field" type="text" name="search_form" placeholder="Type here to search..." />
-	<button id="search" onclick="onSearch()"><li class="fa fa-search"></li></button>
+	<button id="search" onclick="onSearch()">Search</button>
 </search>
 <main id='main'></main>
 <div id='load'></div>
@@ -65,7 +66,7 @@ if(query !== null) {
 }
 
 else {
-	element = 'react';
+	element = 'google';
 	refreshData()
 }
 
@@ -127,6 +128,7 @@ function countTime() {
 		        refreshData();
 		    }
 		    else {
+		    	elem.className += " " + "count";
 		        elem.innerHTML = 'Auto refresh in ' + timeLeft + ' seconds';
 		        timeLeft--;
 		    }
@@ -139,8 +141,8 @@ function renderCards(value, index) {
 	<div class="card_inner">
 	<div class="title"><a href=${value.url} target="_blank">${value.title}</a></div>
 	${checkAuthor(value.author)}
-	<div class="description">${value.description}</div>
 	<div class="content">${value.content}</div>
+	<a href=${value.url} target="_blank" class="read_more">Learn More</a>
 	</div>
 	</div>`
 }
