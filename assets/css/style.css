@@ -2,7 +2,7 @@ body {
 	background:#fff;
 	margin:0;
 	padding: 0;
-	font-family: Lora;
+	font-family: Source Sans Pro;
 	overflow-x: hidden;
 	color: #000;
 }
@@ -12,14 +12,12 @@ body {
 }
 
 a {
-	color: #057;
+	color: #02c;
 	text-decoration: none;
-	transition: .15s ease-in-out;
-	box-shadow: 0 1px 0 transparent;
 }
 
 a:hover {
-	box-shadow: 0 1px 0 #057;
+	text-decoration: underline;
 }
 
 .row {
@@ -36,21 +34,9 @@ a:hover {
 	flex:2;
 }
 
-.header_out {
-	position: absolute;
-	background: #fff;
-	box-shadow: 0 1px 0 #fe2;
-	top:0;
-	left:0;
-	right:0;
-	height: 260px;
-	z-index: -1;
-}
-
 .header {
 	font-size:14px;
 	font-weight: 400;
-	padding-bottom: 2em;
 	display: inline-block;
 	background: transparent;
 }
@@ -67,6 +53,9 @@ a:hover {
 	object-fit: cover;
 	display: inline;
 	margin-right:1em;
+	border-radius: 150px;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
 }
 
 .main {
@@ -81,35 +70,33 @@ a:hover {
 
 .main h2 {
 	display: inline-block;
-	font-size:26px;
+	font-size:22px;
 	font-weight: 400;
-	line-height: .5em;
+	line-height: 1em;
 }
 
 .main p {
 	line-height: 1.3em;
-	font-size:18px;
+	font-size:16px;
 	margin:.5em 0;
 	padding: 0;
 }
 
 .main p strong {
-	background: #E7FFE5;
-	font-weight: 400;
-	font-style: italic;
+	font-weight: 600;
 }
 
 button {
 	display: inline-block;
 	outline: 0;
 	border:none;
-	padding:20px 25px;
+	padding:10px 15px;
 	font-family: lora;
 	font-size: 16px;
-	border-radius: 0px;
+	border-radius: 3px;
 	background: #fff;
-	box-shadow: 0 0 0 1px #acf;
-	color: #067;
+	box-shadow: 0 0 0 1px #666;
+	color: #02c;
 	cursor: pointer;
 	transition: .25s ease-in-out;
 }
@@ -132,23 +119,24 @@ button:hover:after {
 button:hover,
 button:active,
 button:focus {
-	box-shadow: 0 0 0 1px #067;
+	box-shadow: 0 0 0 1px #02c;
 }
 
 #workspace ul {
-	background: #E7FFE5;
-	border-radius: 0px;
+	background: #f5f5f5;
+	border-radius: 3px;
 	padding: 3em;
 }
 
 ul li {
 	margin:.5em 0;
-	font-size:18px;
+	font-size:16px;
 }
 
 .menu {
 	float: right;
 	margin:0;
+	margin-top:1em;
 	padding:0;
 }
 
@@ -160,24 +148,26 @@ ul li {
 }
 
 .menu li a {
-	color: #000;
+	color: #02c;
 }
 
 .tag {
-	background: #ffa;
+	background: #fff;
 	color:#000;
 	display: inline-block;
 	margin:5px;
 	padding:3px 10px;
-	font-size:18px;
+	font-size:16px;
 	font-weight: 400;
-	border-radius: 0px;
+	border-radius: 3px;
 	cursor: default;
-	transition: .1s ease-in-out;
+	transition: .25s ease-in-out;
 }
 
 .tag:hover {
-	background: #fe2;
+	background: #fff;
+	color:#02c;
+	box-shadow: 0 2px 5px #ddd;
 }
 
 .exc {
@@ -191,7 +181,7 @@ ul li {
 }
 
 heart {
-	color:#f44;
+	color:#444;
 }
 
 @media screen and (max-width: 1200px) {
