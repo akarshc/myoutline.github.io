@@ -151,6 +151,7 @@ ul li {
 	display: inline-block;
 	margin:0;
 	margin-left:.4em;
+	font-size:14px;
 	padding: 0;
 }
 
@@ -177,9 +178,12 @@ ul li {
 	box-shadow: 0 2px 5px #ddd;
 }
 
-.footer {
-	font-size: 12px;
-	margin: 3em;
+hr {
+	width:50px;
+	height:1px;
+	background: #000;
+	border:none;
+	margin: 3em auto;
 	text-align: center;
 }
 
