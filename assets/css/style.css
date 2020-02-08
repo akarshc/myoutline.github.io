@@ -2,7 +2,7 @@ body {
 	background:#fff;
 	margin:0;
 	padding: 0;
-	font-family: Source Sans Pro;
+	font-family: Helvetica;
 	overflow-x: hidden;
 	color: #000;
 }
@@ -35,16 +35,15 @@ a:hover {
 }
 
 .header {
-	font-size:14px;
-	font-weight: 400;
+	font-size:12px;
 	display: inline-block;
 	background: transparent;
 }
 
 .header h1{
-	font-size: 28px;
-	line-height: 0px;
+	font-size: 20px;
 	font-weight: 400;
+	line-height: 0px;
 }
 
 .header img {
@@ -70,14 +69,14 @@ a:hover {
 
 .main h2 {
 	display: inline-block;
-	font-size:22px;
-	font-weight: 400;
+	font-size:18px;
+	font-weight: 500;
 	line-height: 1em;
 }
 
 .main p {
-	line-height: 1.3em;
-	font-size:16px;
+	line-height: 1.4em;
+	font-size:14px;
 	margin:.5em 0;
 	padding: 0;
 }
@@ -91,12 +90,12 @@ button {
 	outline: 0;
 	border:none;
 	padding:10px 15px;
-	font-family: lora;
-	font-size: 16px;
+	font-size: 14px;
+	font-weight: 400;
 	border-radius: 3px;
-	background: #fff;
-	box-shadow: 0 0 0 1px #666;
-	color: #02c;
+	background: #06c;
+	box-shadow: 0 2px 5px #9ad;
+	color: #fff;
 	cursor: pointer;
 	transition: .25s ease-in-out;
 }
@@ -117,9 +116,13 @@ button:hover:after {
 }
 
 button:hover,
-button:active,
+button:active {
+	box-shadow: 0 2px 10px #9ad;
+}
+
 button:focus {
-	box-shadow: 0 0 0 1px #02c;
+	transform: scale(.97);
+	transition: .1s ease-in-out;
 }
 
 #workspace ul {
@@ -130,7 +133,7 @@ button:focus {
 
 ul li {
 	margin:.5em 0;
-	font-size:16px;
+	font-size:14px;
 }
 
 .menu {
@@ -157,7 +160,7 @@ ul li {
 	display: inline-block;
 	margin:5px;
 	padding:3px 10px;
-	font-size:16px;
+	font-size:14px;
 	font-weight: 400;
 	border-radius: 3px;
 	cursor: default;
@@ -175,7 +178,7 @@ ul li {
 }
 
 .footer {
-	font-size: 13px;
+	font-size: 12px;
 	margin-top:3em;
 	text-align: center;
 }
