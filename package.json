@@ -4,7 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "concat:css": "concat -o dist/public/assets/css/style.css",
+    "concat": "npm run concat:css && npm run concat:js",
+    "cssmin": "cleancss -o dist/public/assets/css/style.min.css dist/public/assets/css/style.css",
+    "imagemin": "imagemin --out-dir=dist/img public/assets/assets/images/**/*.{png,jpg,gif}",
+    "build:css": "npm run concat:css && npm run cssmin",
+    "build:js": "npm run concat:js && npm run uglify",
+    "build:img": "npm run imagemin"
   },
   "repository": {
     "type": "git",
@@ -17,7 +25,11 @@
   },
   "homepage": "https://github.com/akarshc/akarshc.github.io#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "clean-css-cli": "^4.3.0",
+    "concat": "^1.0.3",
+    "express": "^4.17.1",
+    "imagemin-cli": "^5.1.0",
+    "uglify-js": "^3.7.7"
   },
   "devDependencies": {
     "gh-pages": "^2.2.0"
