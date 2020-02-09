@@ -1,1 +1,6 @@
-include: .htaccess
+plugins:
+  - jekyll-redirect-from
+
+
+title: My other awesome post
+redirect_from: /about
