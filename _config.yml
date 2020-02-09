@@ -1,9 +1,2 @@
 plugins:
   - jekyll-redirect-from
-
-
-title: My amazing post
-redirect_from:
-  - /post
-  - /about-me
-  - /about
