@@ -23,6 +23,7 @@
 	</div>
 	<div class="row">
 		<div class="col">
+			<h2>Blog</h2>
 			<div id="articles"></div>
 		</div>
 	</div>
@@ -32,11 +33,20 @@
 <script type="text/javascript">
 	fetch("https://akarshc.github.io/feed.json")
 	.then(function(res) {
-		res.json();
+		return res.json();
 	})
 	.then(function(data) {
 		console.log(data)
+		document.getElementById('articles').innerHTML = data.posts.map(function(value, index) {
+				return renderArticles(value, index)
+			}).join('')
 	})
+	function renderArticles(value, index) {
+		return `<div class="article" id=${value.id}>
+		<h3>${value.title}</h3>
+		<p class="content">${value.content}</p>
+		</div>`
+	}
 </script>
 </body>
 </html>

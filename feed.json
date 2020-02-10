@@ -3,9 +3,17 @@
 		"id": 0,
 		"title": "This is an example",
 		"date": "10-02-2020",
-		"category": "Something",
-		"tag": "Tagme",
-		"content": "This is just amazing <b>Awesome</b>"
+		"category": "Books",
+		"tag": "Something",
+		"content": "This is just amazing <b>day</b>"
+	},
+	{
+		"id": 1,
+		"title": "My name is...",
+		"date": "10-02-2020",
+		"category": "Life",
+		"tag": "live",
+		"content": "It is all about the life which matters the most"
 	}
 	]
 }
