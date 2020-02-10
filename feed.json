@@ -1,0 +1,11 @@
+{
+	"posts": [{
+		"id": 0,
+		"title": "This is an example",
+		"date": "10-02-2020",
+		"category": "Something",
+		"tag": "Tagme",
+		"content": "This is just amazing <b>Awesome</b>"
+	}
+	]
+}
