@@ -227,7 +227,7 @@ ul li {
 
 .nav {
 	position: absolute;
-	margin-left: 200px;
+	margin-left:210px;
 }
 
 .menu_icon {
@@ -269,6 +269,7 @@ ul li {
 	opacity: .95;
 	border-radius: 5px;
 	padding:15px 0;
+	z-index: 10;
 }
 
 .triangle,
@@ -359,5 +360,12 @@ heart {
     .main {
 		margin:1em auto;
 		width: 90%;
+	}
+	.nav {
+		right:1em;
+	}
+	.menu_icon:hover,
+	.menu_icon:active  {
+		background: #fff;
 	}
 }
