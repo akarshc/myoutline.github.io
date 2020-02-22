@@ -1,8 +1,91 @@
+
+
+@keyframes popIn {
+	0% {
+		opacity: 0.5;
+		transform: scale(.9);
+		visibility: visible;
+	}
+	70% {
+		opacity: 1;
+		transform: scale(1.03);
+		visibility: visible;
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+		visibility: visible;
+	}
+}
+
+@keyframes popOut {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+		visibility: visible;
+	}
+	30% {
+		opacity: 1;
+		transform: scale(1.03);
+		visibility: visible;
+	}
+	80% {
+		opacity: 0;
+		transform: scale(.9);
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@keyframes rotateAdd_1 {
+	0% {
+		transform: rotate(10deg);
+	}
+	100% {
+		transform: rotate(-135deg);
+		margin: 0px 0;
+	}
+}
+
+@keyframes rotateAdd_2 {
+	0% {
+		transform: rotate(10deg);
+	}
+	100% {
+		transform: rotate(135deg);
+		margin: -2px 0;
+	}
+}
+
+@keyframes rotateRemove_1 {
+	0% {
+		transform: rotate(-135deg);
+		margin: 0px 0;
+	}
+	100% {
+		transform: rotate(0deg);
+		margin: 4px 0;
+	}
+}
+
+@keyframes rotateRemove_2 {
+	0% {
+		transform: rotate(135deg);
+		margin: -2px 0;
+	}
+	100% {
+		transform: rotate(0deg);
+		margin: 4px 0;
+	}
+}
+
 body {
 	background:#fff;
 	margin:0;
 	padding: 0;
-	font-family: Helvetica;
+	font-family: Public Sans;
 	overflow-x: hidden;
 	color: #000;
 }
@@ -12,7 +95,7 @@ body {
 }
 
 a {
-	color: #02c;
+	color: #06f;
 	text-decoration: none;
 }
 
@@ -43,7 +126,7 @@ a:hover {
 }
 
 .header h1{
-	font-size: 20px;
+	font-size: 26px;
 	font-weight: 400;
 	line-height: 0px;
 }
@@ -72,8 +155,8 @@ a:hover {
 
 .main h2 {
 	display: inline-block;
-	font-size:18px;
-	font-weight: 500;
+	font-size:24px;
+	font-weight: 400;
 	line-height: 1em;
 }
 
@@ -91,13 +174,14 @@ a:hover {
 button {
 	display: inline-block;
 	outline: 0;
+	font-family: Public Sans;
 	border:none;
 	padding:10px 15px;
 	font-size: 14px;
 	font-weight: 400;
 	border-radius: 3px;
-	background: #06c;
-	box-shadow: 0 2px 5px #9ad;
+	background: #08f;
+	box-shadow: 0 2px 5px #9af;
 	color: #fff;
 	cursor: pointer;
 	transition: .25s ease-in-out;
@@ -120,7 +204,8 @@ button:hover:after {
 
 button:hover,
 button:active {
-	box-shadow: 0 2px 10px #9ad;
+	background: #49f;
+	box-shadow: 0 2px 8px #9af;
 }
 
 button:focus {
@@ -140,22 +225,99 @@ ul li {
 	line-height: 1.5em;
 }
 
-.menu {
-	float: right;
-	margin:1em 0;
-	padding:0;
+.nav {
+	position: absolute;
+	margin-left: 200px;
 }
 
-.menu li {
-	display: inline-block;
-	margin:0;
-	margin-left:.4em;
+.menu_icon {
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 30px;
+	transition: .25s ease-in-out;
+}
+
+.menu_icon:hover {
+	background: #fafafa;
+}
+
+.menu_icon:active {
+	background: #ddd;
+	transform: scale(.95);
+}
+
+.menu_icon_child {
+	width: 25px;
+	height: 2px;
+	background-color: #000;
+	margin: 4px 0;
+}
+
+.menu {
+	position: absolute;
+	visibility: hidden;
+	top:2em;
+	margin-left:-122.5px;
+	padding:0;
+	background: #fff;
+	box-shadow: 0 8px 20px #ddd, 0 0 0 1px #eee;
+	opacity: .95;
+	border-radius: 5px;
+	padding:15px 0;
+}
+
+.triangle,
+.triangle::before {
+	content: "";
+	display: block;
+	width: 0; 
+	height: 0; 
+	margin: 0 auto;
+	margin-right:10px;
+	margin-top:-29.5px;
+	border-left: 14px solid transparent;
+	border-right: 14px solid transparent;
+	border-bottom: 14px solid #eee;
+}
+
+.triangle::before {
+	position: absolute;
+	margin-left:-14px;
+	margin-top:2px;
+	border-bottom: 14px solid #fff;
+}
+
+
+.menu li,
+.menu a {
+	display: block;
+	margin:0px;
 	font-size:14px;
-	padding: 0;
+	padding: 12px 60px;
+	transition: .15s ease-in-out;
+	color: #000;
 }
 
 .menu li a {
-	color: #02c;
+	color: #000;
+}
+
+.menu a:hover {
+	text-decoration: none;
+	background: #f5f5f5;
+}
+
+.menu a:active {
+	background: #ddd;
+}
+
+.active {
+	background: #f5f5f5;
 }
 
 .tag {
