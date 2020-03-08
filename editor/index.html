@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Editor</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h1>Editor</h1>
+<Editor></Editor>
+<content></content>
+
+<script type="text/javascript">
+var content = '';
+function selector(query) {
+	return document.querySelector(query);
+}
+
+selector('Editor').innerHTML += (`
+	<button onclick="document.execCommand('bold');">bold</button>
+	<button onclick="document.execCommand('italic');">italic</button>
+	<button onclick="document.execCommand('underline');">underline</button>
+	<button onclick="forecolor()">Color</button>
+	<button onclick="backcolor()">Back Color</button>
+	<button onclick="document.execCommand('strikeThrough');">strike</button>
+	<button onclick="document.execCommand('justifyCenter');">Center</button>
+	<button onclick="document.execCommand('justifyFull');">Full</button>
+	<button onclick="document.execCommand('justifyLeft');">Left</button>
+	<button onclick="document.execCommand('justifyRight');">Right</button>
+	<button onclick="document.execCommand('insertParagraph');">p</button>
+	<button onclick="document.execCommand('insertOrderedList');">ol</button>
+	<button onclick="document.execCommand('insertUnorderedList');">ul</button>
+	<button onclick="addLink()">Link</button>
+	<button onclick="unLink()">Unlink</button>
+	<button onclick="heading()">Heading</button>
+	<button onclick="fontsize()">Font size</button>
+	<button onclick="fontname()">Font name</button>
+	<button onclick="insertImage()">Img</button>
+	<div class="editor" contenteditable="true"></div><br /><button onclick="submit()">Save</button><br />`);
+
+selector('div[contenteditable]').addEventListener('keydown', function(e) {
+    if (e.keyCode === 13) {
+        document.execCommand('insertHTML', false, '<br/>');
+        return false;
+    }
+});
+
+function forecolor() {
+    var color = prompt('color:', '#');
+    document.execCommand('forecolor', false, color);
+}
+
+function backcolor() {
+    var color = prompt('color:', '#');
+    document.execCommand('backcolor', false, color);
+}
+
+function addLink() {
+    var linkURL = prompt('Enter a URL:', 'http://');
+    document.execCommand('createlink', false, linkURL);
+}
+
+function unLink() {
+    document.execCommand('unlink', false);
+}
+
+function insertImage() {
+    var imgsrc = prompt('Enter image URL:', 'http://');
+    document.execCommand('insertImage', false, imgsrc);
+}
+
+function fontsize() {
+    var size = prompt('Font size: ', '');
+    document.execCommand('fontSize', false, size);
+}
+
+function fontname() {
+    var name = prompt('Font name: ', '');
+    document.execCommand('fontName', false, name);
+}
+
+function heading() {
+    var head = prompt('Heading: ', '');
+    document.execCommand('formatBlock', true, head);
+}
+
+function submit() {
+	content = selector('.editor').innerHTML;
+	console.log(content)
+	selector('content').innerHTML = content;
+}
+
+
+</script>
+</body>
+</html>

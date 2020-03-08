@@ -1,0 +1,22 @@
+body {
+	margin:3em;
+}
+
+.editor {
+	border: none;
+	outline: none;
+	box-shadow: 0 1px 5px #ddd, 0 0 0 1px #eee;
+	min-width: 600px;
+	min-height: 200px;
+	padding:20px 15px;
+	border-radius: 3px;
+	transition: .25s ease-in-out;
+}
+
+.editor:focus {
+	box-shadow: 0 3px 10px #ccc, 0 0 0 1px #eee;
+}
+
+.editor img {
+	max-width: 100%;
+}
