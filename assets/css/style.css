@@ -44,7 +44,7 @@
 		transform: rotate(10deg);
 	}
 	100% {
-		transform: rotate(-135deg);
+		transform: rotate(45deg);
 		margin: 0px 0;
 	}
 }
@@ -54,14 +54,14 @@
 		transform: rotate(10deg);
 	}
 	100% {
-		transform: rotate(135deg);
+		transform: rotate(-45deg);
 		margin: -2px 0;
 	}
 }
 
 @keyframes rotateRemove_1 {
 	0% {
-		transform: rotate(-135deg);
+		transform: rotate(45deg);
 		margin: 0px 0;
 	}
 	100% {
@@ -72,7 +72,7 @@
 
 @keyframes rotateRemove_2 {
 	0% {
-		transform: rotate(135deg);
+		transform: rotate(-45deg);
 		margin: -2px 0;
 	}
 	100% {
@@ -171,6 +171,21 @@ a:hover {
 	font-weight: 600;
 }
 
+.col img {
+	max-width: 100%;
+}
+
+.caption {
+	font-size: 12px;
+	color:#666;
+}
+
+.warn  {
+	margin:1em 0;
+	font-size:12px;
+	color:#444;
+}
+
 button {
 	display: inline-block;
 	outline: 0;
@@ -181,7 +196,6 @@ button {
 	font-weight: 400;
 	border-radius: 3px;
 	background: #08f;
-	box-shadow: 0 2px 5px #9af;
 	color: #fff;
 	cursor: pointer;
 	transition: .25s ease-in-out;
@@ -194,7 +208,7 @@ button::after {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	transition: .25s ease-in-out;
+	transition: .15s ease-in-out;
 	margin-left: 5px;
 }
 
@@ -205,12 +219,21 @@ button:hover:after {
 button:hover,
 button:active {
 	background: #49f;
-	box-shadow: 0 2px 8px #9af;
 }
 
-button:focus {
-	transform: scale(.97);
-	transition: .1s ease-in-out;
+.secondary {
+	background:#dfd;
+	color:#083;
+	margin:1em 0;
+	padding:5px 12px;
+	border-radius: 100px;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 2px;
+}
+
+.secondary:hover {
+	background:#cfd;
 }
 
 #workspace ul {
@@ -279,18 +302,19 @@ ul li {
 	width: 0; 
 	height: 0; 
 	margin: 0 auto;
-	margin-right:10px;
-	margin-top:-29.5px;
-	border-left: 14px solid transparent;
-	border-right: 14px solid transparent;
-	border-bottom: 14px solid #eee;
+	margin-right:12px;
+	margin-top:-27px;
+	margin-bottom:12.5px;
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+	border-bottom: 12px solid #eee;
 }
 
 .triangle::before {
 	position: absolute;
-	margin-left:-14px;
+	margin-left:-12px;
 	margin-top:2px;
-	border-bottom: 14px solid #fff;
+	border-bottom: 12px solid #fff;
 }
 
 
@@ -331,7 +355,7 @@ ul li {
 	font-weight: 400;
 	border-radius: 3px;
 	cursor: default;
-	transition: .25s ease-in-out;
+	transition: .15s ease-in-out;
 }
 
 .tag:hover {
