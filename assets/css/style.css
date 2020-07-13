@@ -95,11 +95,12 @@ body {
 }
 
 a {
-	color: #06f;
+	color: #06c;
 	text-decoration: none;
 }
 
 a:hover {
+	color: #06c;
 	text-decoration: underline;
 }
 
@@ -109,6 +110,13 @@ a:hover {
 	margin:0 auto;
 	flex:1;
 	width: 100%;
+}
+
+.home_page {
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+
 }
 
 .col {
@@ -144,7 +152,7 @@ a:hover {
 
 .main {
 	margin:0em auto;
-	width:480px;
+	width:620px;
 	padding:2em 0;
 }
 
@@ -160,9 +168,15 @@ a:hover {
 	line-height: 1em;
 }
 
+.tagline {
+	font-size: 16px;
+	text-align: center;
+	font-weight: 700;
+}
+
 .main p {
 	line-height: 1.5em;
-	font-size:14px;
+	font-size:16px;
 	margin:.5em 0;
 	padding: 0;
 }
@@ -191,20 +205,21 @@ button {
 	outline: 0;
 	font-family: Public Sans;
 	border:none;
-	padding:10px 15px;
+	padding:8px 15px;
+	text-shadow:0 0px 2px #049;
 	font-size: 14px;
-	font-weight: 400;
-	border-radius: 3px;
-	background: #08f;
+	font-weight: 700;
+	border-radius: 100px;
+	background: #06c;
 	color: #fff;
 	cursor: pointer;
 	transition: .25s ease-in-out;
 }
 
 button::after {
-	content: '\2794';
-	font-weight: 100;
-	font-size:11px;
+	content: '\2B9E';
+	font-weight: 400;
+	font-size:10px;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -212,13 +227,9 @@ button::after {
 	margin-left: 5px;
 }
 
-button:hover:after {
-	margin-left:10px;
-}
-
 button:hover,
 button:active {
-	background: #49f;
+	background: #04a;
 }
 
 .secondary {
@@ -229,7 +240,8 @@ button:active {
 	border-radius: 100px;
 	text-transform: uppercase;
 	font-size: 12px;
-	letter-spacing: 2px;
+	text-shadow: none;
+	letter-spacing: 1px;
 }
 
 .secondary:hover {
@@ -287,8 +299,9 @@ ul li {
 	top:2em;
 	margin-left:-122.5px;
 	padding:0;
-	background: #fff;
-	box-shadow: 0 8px 20px #ddd, 0 0 0 1px #eee;
+	background-color: rgba(255, 255, 255, .95);
+	backdrop-filter: blur(1.8px);
+	box-shadow: 0 1px 4px #ddd, 0 0 0 1px #eee;
 	opacity: .95;
 	border-radius: 5px;
 	padding:15px 0;
@@ -299,11 +312,11 @@ ul li {
 .triangle::before {
 	content: "";
 	display: block;
-	width: 0; 
-	height: 0; 
+	width: 0;
+	height: 0;
 	margin: 0 auto;
 	margin-right:12px;
-	margin-top:-27px;
+	margin-top:-28px;
 	margin-bottom:12.5px;
 	border-left: 12px solid transparent;
 	border-right: 12px solid transparent;
@@ -320,12 +333,14 @@ ul li {
 
 .menu li,
 .menu a {
+	position: relative;
 	display: block;
 	margin:0px;
 	font-size:14px;
 	padding: 12px 60px;
-	transition: .15s ease-in-out;
+	transition: .15s ease-out;
 	color: #000;
+	z-index: 2;
 }
 
 .menu li a {
@@ -334,7 +349,8 @@ ul li {
 
 .menu a:hover {
 	text-decoration: none;
-	background: #f5f5f5;
+	color: #fff;
+	background: #06d;
 }
 
 .menu a:active {
