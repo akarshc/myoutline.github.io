@@ -95,12 +95,12 @@ body {
 }
 
 a {
-	color: #06c;
+	color: #27c;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #06c;
+	color: #27c;
 	text-decoration: underline;
 }
 
@@ -110,13 +110,6 @@ a:hover {
 	margin:0 auto;
 	flex:1;
 	width: 100%;
-}
-
-.home_page {
-	flex-flow: column;
-	align-items: center;
-	justify-content: center;
-
 }
 
 .col {
@@ -140,14 +133,11 @@ a:hover {
 }
 
 .header img {
-	width: 120px;
-	height: 120px;
+	width: 250px;
+	height: 250px;
 	object-fit: cover;
 	display: inline;
 	margin-right:1em;
-	border-radius: 150px;
-	filter: grayscale(100%);
-	-webkit-filter: grayscale(100%);
 }
 
 .main {
@@ -206,46 +196,26 @@ button {
 	font-family: Public Sans;
 	border:none;
 	padding:8px 15px;
-	text-shadow:0 0px 2px #049;
 	font-size: 14px;
 	font-weight: 700;
 	border-radius: 100px;
-	background: #06c;
-	color: #fff;
+	background-color: rgba(200, 220, 255, .95);
+	color: #000;
 	cursor: pointer;
 	transition: .25s ease-in-out;
 }
 
-button::after {
-	content: '\2B9E';
-	font-weight: 400;
-	font-size:10px;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	transition: .15s ease-in-out;
-	margin-left: 5px;
-}
-
 button:hover,
 button:active {
-	background: #04a;
+	background-color: rgba(155, 200, 255, .95);
 }
 
 .secondary {
-	background:#dfd;
-	color:#083;
-	margin:1em 0;
-	padding:5px 12px;
-	border-radius: 100px;
-	text-transform: uppercase;
-	font-size: 12px;
-	text-shadow: none;
-	letter-spacing: 1px;
+	background-color: rgba(220, 255, 220, .95);
 }
 
 .secondary:hover {
-	background:#cfd;
+	background-color: rgba(180, 255, 180, .95);
 }
 
 #workspace ul {
@@ -262,7 +232,8 @@ ul li {
 
 .nav {
 	position: absolute;
-	margin-left:210px;
+	margin-top:-30px;
+	margin-left:285px;
 }
 
 .menu_icon {
@@ -297,11 +268,11 @@ ul li {
 	position: absolute;
 	visibility: hidden;
 	top:2em;
-	margin-left:-122.5px;
+	margin-left:-242.25px;
 	padding:0;
 	background-color: rgba(255, 255, 255, .95);
-	backdrop-filter: blur(1.8px);
-	box-shadow: 0 1px 4px #ddd, 0 0 0 1px #eee;
+	backdrop-filter: blur(2px);
+	box-shadow: 0 1px 5px #eee, 0 0 0 1px #eee;
 	opacity: .95;
 	border-radius: 5px;
 	padding:15px 0;
@@ -337,8 +308,7 @@ ul li {
 	display: block;
 	margin:0px;
 	font-size:14px;
-	padding: 12px 60px;
-	transition: .15s ease-out;
+	padding: 12px 120px;
 	color: #000;
 	z-index: 2;
 }
@@ -349,12 +319,13 @@ ul li {
 
 .menu a:hover {
 	text-decoration: none;
-	color: #fff;
-	background: #06d;
+	background-color: rgba(200, 220, 255, .95);
+	backdrop-filter: blur(1.8px);
 }
 
 .menu a:active {
-	background: #ddd;
+	background: #def;
+	color: #000;
 }
 
 .active {
