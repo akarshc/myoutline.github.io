@@ -90,6 +90,18 @@ body {
 	color: #000;
 }
 
+.dark{
+	background: #000;
+	color: #fff;
+}
+.dark-menu-ico{
+	background-color: white !important;
+}
+
+#onoff{
+	width: 100px;
+}
+
 .container {
 	min-height: 100vh;
 }
@@ -233,7 +245,7 @@ ul li {
 .nav {
 	position: absolute;
 	margin-top:-30px;
-	margin-left:285px;
+	margin-left:352px;
 }
 
 .menu_icon {
