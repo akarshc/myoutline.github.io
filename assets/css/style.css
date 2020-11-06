@@ -325,9 +325,21 @@ ul li {
 
 
 @media screen and (max-width: 486px) {
-    .main {
+  .main {
 		margin:1em auto;
 		width: 90%;
+	}
+	.row {
+		flex-flow: column;
+	}
+	.col-1 {
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 1em;
+	}
+	.propic {
+		width: 100px;
+		height: 100px;
 	}
 	.nav {
 		right:1em;
